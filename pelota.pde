@@ -9,7 +9,7 @@ class Pelota {
     velocidad = new PVector(random(4, 6), random(-6, -5));  //Su velocidad y direccion será valores aleatorios en X y Y
   }
   
-  //Metodo para volver a posicionar la pelota en la base de jugador, en el caso de que este la haya perdido
+  //posicionar la pelota en la base de jugador, en el caso de que este la haya perdido
   void setPosicion(PVector posicionJugador) {
     posicion = new PVector(posicionJugador.x, posicionJugador.y - tamano); 
     velocidad = new PVector(random(4, 6), random(-6, -5));  
@@ -19,7 +19,7 @@ class Pelota {
     noStroke();
     ellipse(posicion.x, posicion.y, tamano, tamano);
   }  
-  //Metodo para mover la pelota
+  //mover la pelota
   void mover() {
     posicion.add(velocidad); //A la posicion se le suma el vector velocidad
   }
@@ -54,17 +54,13 @@ class Pelota {
     if(posicion.y > height) {
       return true;
     } 
-    //Si no, entonces no ha pasado nada :)
     else {
       return false;
     }
   }
   
-  //El metodo más dificil xd
-  
   void eliminarBlock(ArrayList<PVector> blocks, ArrayList<Integer> colores,int ancho, int alto) {
     
-    //Se evaluará cada bloque 
     for(int i = 0; i < blocks.size(); i++) {
       PVector block = blocks.get(i); //Se obtiene el bloque en la posicion i
       
