@@ -40,7 +40,8 @@ void draw() {
       textSize(20);
       text("Press CENTER to start", width/2, 500);
     }
-    if(estado==1){  /* Cuando quise introducir el código en el estado 1 para que desaparezcan las intrucciones y no me deja hacerlo*/
+    if(estado==1){  /* Cuando quise introducir el código en el estado 1 para que desaparezcan las intrucciones apretando una tecla, no me dejaba hacerlo, las instrucciones aparecian cuando
+                        mantenía apretada la tecla,  por eso preferí dejarlo asi antes de no tenerlas*/
     }   
     
     e.mostrar(); 
