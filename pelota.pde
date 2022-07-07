@@ -23,7 +23,7 @@ class Pelota {
   void mover() {
     posicion.add(velocidad); //A la posicion se le suma el vector velocidad
   }
-   //Metodo para rebotar la pelota
+   //rebotar la pelota
   void rebotar(PVector posicionJugador, int anchoJugador, int altoJugador) {
     float max = posicionJugador.x + anchoJugador/2;  //Valor maximo en el eje x que ocupa la base del jugador
     float min = posicionJugador.x - anchoJugador/2; //Valor minimo en el eje x que ocupa la base del jugador
@@ -36,7 +36,7 @@ class Pelota {
     }
   }
   
-  //Metodo para rebotar en las paredes, excepto la pared inferior
+  //rebotar en las paredes, excepto la pared inferior
   void validarBordes() {
     //Si la pelota toca la pared izquierda o derecha, rebotará en direccion contraria
     if(posicion.x < 0 || posicion.x > width) {
@@ -48,7 +48,7 @@ class Pelota {
     }
   }
   
-  //Metodo para validar si el jugador ha perdido la pelota (si la pelota sobrepasó la pared inferior)
+  //de esta forma se valida si el jugador ha perdido la pelota (si la pelota sobrepasó la pared inferior)
   boolean validarMuerte() {
     //Si la pelota sobrepasó el suelo, entonces se perdió la pelota
     if(posicion.y > height) {
@@ -64,7 +64,7 @@ class Pelota {
     for(int i = 0; i < blocks.size(); i++) {
       PVector block = blocks.get(i); //Se obtiene el bloque en la posicion i
       
-      /*Si la posicion de la pelota esta dentro del area encerrada por esta condicion (el area del bloque), 
+      /*Si la posicion de la pelota esta dentro del area encerrada por esta condición, 
       entonces se evaluará en que lado del bloque chocó la pelota */
       if(posicion.x >= block.x - tamano/2 && posicion.x <=  block.x + ancho + tamano/2 && posicion.y > block.y - tamano/2 && posicion.y < block.y + alto + tamano/2) {
         
