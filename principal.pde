@@ -36,7 +36,7 @@ class juego{
    /*void reiniciar(){
      if(keyPressed){
        if(keyCode== ENTER){
-         setup();
+    
        }
      }
    }*/
