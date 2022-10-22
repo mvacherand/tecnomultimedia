@@ -1,21 +1,29 @@
 /* class obstaculo{
-  propiedades --> tam, pos x, pos y
+     ~Propiedades:
+      imagen
+      string
+      posicion x e y 
+      
+      
+    ~Constuctor:
+    obstaculo()
+    -asigno valores
+    -cargo imagen  (      + ".png");
+    
+    
+    ~Métodos
+    void dibujar 
+    imagen (      );
+    
+    
+    if (     ) ---> que los obstáculos se muevan en eje x
+    
   
-  CONSTRUCTOR
-  obstaculo()
-  .asignacion de valores
   
   
-  METODO
-   void mostrar(){
-     
-     
-   }
-
-
-
-
-
+  
+  
+}
 
 
 
